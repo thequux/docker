@@ -56,13 +56,13 @@ type APIContainers struct {
 
 func (self *APIContainers) ToLegacy() APIContainersOld {
 	return APIContainersOld{
-		ID: self.ID,
-		Image: self.Image,
-		Command: self.Command,
-		Created: self.Created,
-		Status: self.Status,
-		Ports: displayablePorts(self.Ports),
-		SizeRw: self.SizeRw,
+		ID:         self.ID,
+		Image:      self.Image,
+		Command:    self.Command,
+		Created:    self.Created,
+		Status:     self.Status,
+		Ports:      displayablePorts(self.Ports),
+		SizeRw:     self.SizeRw,
 		SizeRootFs: self.SizeRootFs,
 	}
 }
@@ -76,11 +76,6 @@ type APIContainersOld struct {
 	Ports      string
 	SizeRw     int64
 	SizeRootFs int64
-}
-
-type APISearch struct {
-	Name        string
-	Description string
 }
 
 type APIID struct {
